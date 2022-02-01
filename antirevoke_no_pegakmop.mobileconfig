@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>ConsentText</key>
+		<dict>
+			<key>default</key>
+			<string>anti-revoke cert localhost DNS запретит доступ вашему устройству к серверам Apple:
+
+⛔️ocsp.apple.com
+⛔️ocsp2.apple.com
+⛔️world-gen.g.aaplimg.com
+⛔️gdmf.apple.com
+⛔️www.gdmf.apple.com
+⛔️ppq.apple.com
+⛔️iadsdk.apple.com
+
+Если даже сертификат отзовут Аpple, приложения всё ещё будут работать.🙃</string>
+		</dict>
+		<key>PayloadContent</key>
+		<array>
+			<dict>
+				<key>DNSSettings</key>
+				<dict>
+					<key>DNSProtocol</key>
+					<string>TLS</string>
+					<key>ServerAddresses</key>
+					<array>
+						<string>127.0.0.1</string>
+					</array>
+					<key>ServerName</key>
+					<string>localhost</string>
+					<key>SupplementalMatchDomains</key>
+					<array>
+						<string>ocsp.apple.com</string>
+						<string>ocsp2.apple.com</string>
+						<string>world-gen.g.aaplimg.com</string>
+						<string>gdmf.apple.com</string>
+						<string>www.gdmf.apple.com</string>
+						<string>ppq.apple.com</string>
+						<string>iadsdk.apple.com</string>
+						<string>checkdns.lazyshop.app</string>
+					</array>
+				</dict>
+				<key>PayloadDisplayName</key>
+				<string>anti-revoke cert localhost DNS</string>
+				<key>PayloadIdentifier</key>
+				<string>com.apple.dnsSettings.managed.b78db985-cdc0-4b4a-9cc1-4f7293f543f2</string>
+				<key>PayloadType</key>
+				<string>com.apple.dnsSettings.managed</string>
+				<key>PayloadUUID</key>
+				<string>00008020-000c5c103c08002e</string>
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+			</dict>
+		</array>
+		<key>PayloadDescription</key>
+		<string>anti-revoke cert localhost DNS не защитит от блокировки сертификата, но хотя бы приложения ещё будут открываться после отзыва сертификата  Apple.🙃
+
+✅Для включения защиты подписанных приложений вашим сертификатом, после установки профиля, перейдите:
+
+⚙️Настройки > ⚙️Основные > VPN и сеть(VPN и профили в iOS15) > DNS > и выберите anti-revoke cert localhost DNS. ✅Готово.
+
+Приятного использования профилем anti-revoke cert localhost DNS.
+
+📵P.S. Ниже iOS 14 способ не работает к сожалению.</string>
+		<key>PayloadDisplayName</key>
+		<string>anti-revoke cert localhost DNS</string>
+		<key>PayloadIdentifier</key>
+		<string>24497ba6-c1bf-46e4-a689-312384c14a90</string>
+		<key>PayloadScope</key>
+		<string>System</string>
+		<key>PayloadType</key>
+		<string>Configuration</string>
+		<key>PayloadUUID</key>
+		<string>00008020-000c5c103c08002e</string>
+		<key>PayloadVersion</key>
+		<integer>1</integer>
+		<key>TargetDeviceType</key>
+		<integer>0</integer>
+	</dict>
+</plist>

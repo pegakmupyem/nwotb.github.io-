@@ -1,0 +1,469 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#161625">
+    <link rel="apple-touch-icon" sizes="76x76" href="./resources/adblock/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/adblock/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/adblock/favicon-16x16.png">
+    <link rel="manifest" href="./resources/adblock/site.webmanifest">
+    <link rel="mask-icon" href="./resources/adblock/safari-pinned-tab.svg" color="#161625">
+    <link rel="shortcut icon" href="./resources/adblock/favicon.ico">
+    <meta name="msapplication-TileColor" content="#161625">
+    <meta name="msapplication-config" content="./resources/adblock/browserconfig.xml">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Ad Blocker Test</title>
+    <script async defer src="https://aurora-d3.herokuapp.com/public/aurora.js"
+        aurora-id="520ce98a53142dd933fe4c0f3abb41a0">
+    </script>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <style>
+        body {
+            background-color: var(--bg);
+            background-image: none;
+        }
+
+        main {
+            padding-top: 6rem;
+        }
+
+        [data-theme=dark],
+        html,
+        [data-theme=light] {
+            --primary: var(--blue);
+        }
+
+        /*------------- Tests section -------------*/
+        .test {
+            background-color: var(--bg3);
+            color: var(--black);
+            padding: .4rem;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            text-align: center;
+            line-height: 60px;
+            transition: all 1s;
+            s
+        }
+
+        .testWrap h3,
+        .testWrap h5,
+        .test span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .testWrap>div,
+        .test>div {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .testWrap svg {
+            height: 25px;
+            fill: var(--txt);
+        }
+
+        .test>div {
+            display: none;
+        }
+
+        .test>div>div {
+            user-select: none;
+            overflow-x: auto;
+            border-radius: var(--radius);
+            white-space: nowrap;
+            color: var(--black);
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .test>span svg {
+            fill: var(--black);
+        }
+
+        .test.show>div {
+            display: flex;
+        }
+
+        #bar {
+            width: 10em;
+            margin: auto;
+        }
+
+        .rp_text {
+            color: var(--txt) !important;
+        }
+
+        .cnt2 {
+            margin: auto;
+            max-width: 700px;
+            overflow-y: auto;
+        }
+
+        .cl_info {
+            margin: auto;
+            margin-top: 5px;
+            font-weight: bold;
+            width: 150px;
+            padding: 5px;
+            border-radius: .3rem;
+            text-align: center;
+            color: var(--black);
+        }
+
+
+        /* Toast message */
+        .toast-message {
+            position: fixed;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--blue);
+            border-radius: 10px;
+            width: 400px;
+            font-size: 16px;
+            transition: all .5s;
+            z-index: 9999;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 424px) {
+            .toast-message {
+                width: calc(100% - 20px);
+            }
+        }
+
+        .toast-message.success {
+            background: var(--blue);
+
+        }
+
+        .toast-message .message {
+            color: var(--black);
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        /* Loading Wrapper */
+        .loadingWrap {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg);
+            z-index: 5;
+        }
+
+        .loadingWrap svg {
+            max-width: 150px;
+            fill: var(--txt);
+        }
+
+        .loading {
+            display: flex;
+            width: 10em;
+            height: 10em;
+            margin-top: 3rem;
+            border: 10px solid transparent;
+            border-top-color: var(--green);
+            border-bottom-color: var(--green);
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        #testingInfo {
+            width: 90%;
+            background: var(--bg2);
+            padding: .5rem;
+            margin: .5rem;
+            border-radius: .3rem;
+        }
+
+        .loading:before {
+            content: '';
+            display: block;
+            margin: auto;
+            width: 4em;
+            height: 4em;
+            border: 10px solid var(--red);
+            border-radius: 50%;
+            animation: pulse 1s alternate ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        ._icon {
+            display: block;
+            height: 1.6rem;
+            fill: currentColor;
+            margin: 0 auto;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        ._notif {
+            background: var(--primary);
+            border-radius: var(--radius);
+            color: var(--txt-r);
+            margin: 1rem 0;
+
+        }
+
+
+        ._notif svg {
+            height: 26px;
+            fill: currentColor;
+        }
+
+        ._notif>span {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        ._notif>div {
+            padding: 0 1rem;
+            padding-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="_overflowhidden">
+
+    <div class="loadingWrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path
+                d="M12.787 29.698c-2.052-1.173-5.508-4.364-7.216-6.664C1.848 18.021-.01 12.477 0 6.418c.005-2.713.165-3.071 1.69-3.776C4.147 1.507 6.935.68 9.827.23c1.967-.307 5.99-.307 7.956 0 3.814.594 8.5 2.205 9.35 3.213.455.542.53 1.201.442 3.903-.077 2.353-.264 3.7-.815 5.891-1.476 5.862-4.997 11.208-9.906 15.04-2.287 1.786-2.996 2.034-4.067 1.421zm1.748-1.842c1.52-1.031 3.765-3.136 5.155-4.832 3.852-4.703 6.089-10.982 6.098-17.124.002-1.364-.046-1.426-1.584-2.038-3.637-1.449-6.481-2.001-10.334-2.007-3.798-.005-6.664.524-10.19 1.88-1.704.655-1.86.837-1.86 2.174.001 6.13 2.232 12.383 6.111 17.13 1.785 2.184 5.173 5.16 5.874 5.16.123 0 .452-.154.73-.343zm-1.928-2.936c-1.83-1.503-4.388-4.402-5.077-5.754-.297-.58-.245-1.232.123-1.542.124-.105.656-.38 1.182-.61l.957-.418.583.537c1.743 1.606 4.489 1.874 6.446.63 1.317-.839 2.356-2.353 2.541-3.704.077-.558.086-.567.745-.712 2.384-.524 2.799-.212 2.118 1.595-1.327 3.523-3.821 7.049-6.765 9.563-1.57 1.34-1.703 1.36-2.853.415zm-6.975-9.816c-.599-.42-1.502-4.042-1.737-6.962-.174-2.17-.108-2.314 1.31-2.86 2.765-1.063 5.24-1.492 8.6-1.492 3.368 0 5.835.429 8.617 1.5 1.382.53 1.489.761 1.306 2.829-.18 2.044-.21 2.07-2.734 2.486-1.02.168-1.872.282-1.892.254a49.76 49.76 0 01-.46-.724c-2.405-3.834-7.973-3.35-9.713.846-.166.403-.277 1.065-.326 1.95l-.074 1.34-1.166.516c-1.321.585-1.342.589-1.73.317z" />
+        </svg>
+        <h5>Testing..</h5>
+        <div id="testingInfo"></div>
+        <span class="loading"></span>
+    </div>
+
+    <div class="toast-message">
+        <div class="message">This is an Alert!</div>
+    </div>
+    <!-- Modal Box  -->
+    <div class="modal" id="info-modal">
+       
+    </div>
+    <header class="fixed">
+        <nav>
+           
+        </nav>
+    </header>
+    <main>
+       
+       
+
+        <div id="test" class="testWrap"></div>
+        <div id="test1" class="testWrap"></div>
+
+       
+    </main>
+   
+
+</body>
+<script src="./resources/adblock/data.js"></script>
+<script src="./src/js/colla.js"></script>
+<script src="./src/js/radialprogress.js"></script>
+<script src="./src/js/d3Notif.js"></script>
+<script src="./src/js/script.js"></script>
+<script>
+    function closeNotif() {
+        var n = document.querySelector("._notif");
+        n.remove();
+    }
+
+
+
+
+    //--------------------------------------------------
+    //Notification toast 
+    var notification = new Notif({
+        topPos: 10,
+        classNames: 'success',
+        autoClose: true,
+        autoCloseTimeout: 2000
+    });
+    //Radial points
+    var bar = new RadialProgress(document.getElementById('bar'), {
+        colorBg: "#ff3b3f",
+        colorFg: "#3cc47c",
+        colorText: "#202020",
+        thick: 12
+    });
+    var nTest = 0; //Number of url to be tested
+    const testWrapper = document.getElementById("test"); //Tests wrapper
+    var points = 0; //Points of blocked urls
+    //--------------------------------------------------
+
+
+    //Copy to clipboard the str value
+    function copyToClip(str) {
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        const selected =
+            document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+        el.select();
+        document.execCommand('copy');
+        $(el).remove();
+        if (selected) {
+            document.getSelection().removeAllRanges();
+            document.getSelection().addRange(selected);
+        }
+        notification.showN('URL copied to clipboard !', 'success');
+    }
+
+    //Function to check an url and set red/green result
+    async function check_url(url, div, parent, np) {
+        // Lets set up our `AbortController`, and create a request options object
+        // that includes the controller's `signal` to pass to `fetch`.
+        const controller = new AbortController()
+        const config = {
+            ...{
+                method: 'HEAD',
+                mode: 'no-cors'
+            },
+            signal: controller.signal
+        }
+        // Set a timeout limit for the request using `setTimeout`. If the body
+        // of this timeout is reached before the request is completed, it will
+        // be cancelled.
+        const timeout = setTimeout(() => {
+            controller.abort()
+        }, 8000);
+
+        var hostDiv = document.createElement("div");
+        if (!np)
+            nTest += 1;
+        hostDiv.innerHTML = url;
+        hostDiv.onclick = () => {
+            copyToClip(url);
+        };
+        div.appendChild(hostDiv);
+        await fetch(url, config, timeout, parent, div).then(response => {
+                console.log(response);
+                $(parent).css("background", "var(--red)");
+                $(hostDiv).css("background", "var(--red)");
+            }) //Response was received --> ads are NOT blocked
+            .catch(error => {
+                console.log(error.message);
+                $(hostDiv).css("background", "var(--green)");
+                if (!np) {
+                    points += 100 / nTest;
+                    bar.setValue(points / 100);
+
+                } //No response --> ads are blocked
+            });
+    }
+
+    //Function to collapse a test
+    function show_info(t) {
+        t = t.parentElement;
+        var others = document.querySelectorAll(".test");;
+        others.forEach(element => {
+            if (element != t) $(element).removeClass("show");
+        });
+        $(t).toggle("show");
+    }
+    // Function to fetch all the tests
+    async function fetchTests() {
+        const testingInfoLoading = document.getElementById("testingInfo");
+        let fetches = [];
+        for (element in data) {
+            var catEl = document.createElement("div");
+            catEl.id = element;
+            catEl.innerHTML = "<h3>" + icons[element] + "&nbsp;&nbsp;" + element + "</h3>";
+            testWrapper.appendChild(catEl);
+            var category = data[element];
+            var testInfo = document.createElement("div");
+            var countTests = 0;
+            for (key in category) {
+                //Set log test
+                var div = document.createElement('div');
+                const dw = document.createElement('div');
+                div.classList.add("test");
+                div.id = key;
+                div.style.background = "var(--green)";
+                div.innerHTML = "<span onclick='show_info(this)'>" + key + "</span>";
+                div.appendChild(dw);
+                catEl.appendChild(div);
+                if (category.hasOwnProperty(key)) {
+                    var value = category[key];
+
+                    if (Array.isArray(value)) {
+                        for (let i = 0; i < value.length; i++) {
+                            fetches.push(check_url(value[i], dw, div));
+                            countTests++;
+                        }
+
+                    } else fetches.push(check_url(value, dw, div));
+                }
+                testInfo.innerHTML = "Testing urls => " + element + "  |  Number of tests => " + countTests;
+                testingInfoLoading.appendChild(testInfo);
+            }
+        }
+        //Test fetch for the OEMs
+        var oemTest = document.createElement("div");
+        oemTest.id = "OEM";
+        oemTest.innerHTML = "<h3>" + icons["OEM"] +
+            "&nbsp;&nbsp; OEM </h3><h5> Optional test separated from final points</h5>";
+        testWrapper.appendChild(oemTest);
+        for (key in dataOEM) {
+            var div = document.createElement('div');
+            const dw = document.createElement('div');
+            div.classList.add("test");
+            div.id = key;
+            div.style.background = "var(--green)";
+            div.innerHTML = "<span onclick='show_info(this)'>" + icons[key] + "&nbsp;&nbsp;" + key + "</span>";
+            div.appendChild(dw);
+            oemTest.appendChild(div);
+            var value = dataOEM[key];
+            if (Array.isArray(value)) {
+                for (let i = 0; i < value.length; i++)
+                    fetches.push(check_url(value[i], dw, div, "np"));
+            } else fetches.push(check_url(value, dw, div, "np"));
+        }
+        let results = await Promise.all(fetches);
+        return results; //do whatever you want with your results like converting them to json.
+    }
+    window.onload = function () {
+        new navbar();
+        new themeManager();
+        new gotop();
+        new aos();
+        new modal();
+        fetchTests().then((result) => {
+            $(".loadingWrap").fade("out", () => {
+                console.log("All tests completed");
+                $("body").removeClass("_overflowhidden");
+            });
+        });
+    }
+</script>
+</html>
