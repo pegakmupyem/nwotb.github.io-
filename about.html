@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="//kinofilms.tk/manifest.json">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#000000">
@@ -54,18 +54,13 @@ if ('serviceWorker' in navigator) {
     <div class="box">
 		<div id="navbar" class="">
         <div id="navInner">
-            <span id="navbarName" onclick="location.href='/';">Дудочник</span>
+            <span id="navbarName" onclick="location.href='/film';">Дудочник</span>
         </div>
     </div>
 
     <div class="backgroundMountain"></div>
     <div class="backgroundMountain" id="blurredMountain"></div>
     <div class="mainContent">
-	<div class="player1" style="text-align: center; position: relative; justify-content: center; align-items: center">
-		<input type="search" id="text" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите название фильма или сериала?"> 
-		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Искать">
-   	</div>
-
 	<div class="fadeInElement">
 	<div class="top-gallery-item">
         <div class="title-wrap">
