@@ -4,7 +4,7 @@
   "description": "веб приложение нашего сайта для просмотра фильмов и сериалов без смс и регистрации",
   "lang": "ru",
   "start_url": "https://kinofilms.tk/film",
-  "scope": "/",
+  "scope": "https://kinofilms.tk/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000",
