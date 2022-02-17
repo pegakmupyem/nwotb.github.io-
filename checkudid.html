@@ -1,0 +1,393 @@
+<html>
+<head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your info</title>
+        <link rel="shortcut icon" href="/static/img/udid@2x.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/bootstrap/4.5.2/css/bootstrap.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-36321328-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36321328-22');
+</script>
+    </head>
+
+<body>
+<header>
+    <div class="header-bg">
+  <div class="header container pt-4 pb-3">
+  <nav class="navbar navbar-expand-lg navbar-light px-0 pt-1">
+    <div onclick="document.location='/'" class="navbar-brand mr-4">
+      <img src="/static/img/logo.svg" width="40" height="40" alt="">
+    </div>
+    <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23" aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent23">
+      <ul class="navbar-nav pl-2">
+        <li class="nav-item mr-4">
+          <a class="nav-link about" href="/about/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/how_does_it_work/">How does it work?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api_for_developers/">API for Developers</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle learn-more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a>Learn more</a> 
+            </button>
+            <div class="dropdown-menu  learn-more-dropdown" aria-labelledby="dropdownMenuButton" style="opacity: 0.9; border-radius: 20px;">
+              <a class="dropdown-item" href="/what_is_udid/">What is UDID?</a>
+              <a class="dropdown-item" href="/why_is_the_udid_important/">Why is the UDID important?</a>
+              <a class="dropdown-item" href="/step_by_step_guide/">Step-by-Step Guide to Obtain your UDID on your iOS Device</a>
+              <a class="dropdown-item" href="/what_is_an_imei_number/">What is an IMEI number?</a>
+              <a class="dropdown-item" href="/reasons_your_IMEI_number_should_be_made_personal/">Reasons Your IMEI Number Should Be Made Personal</a>
+              <a class="dropdown-item" href="/difference_between_imei_and_imsi_numbers/">Difference between IMEI and IMSI numbers</a>
+              <a class="dropdown-item" href="/how_to_track_a_stolen_phone_using_IMEI/">How to track a stolen phone using IMEI</a>
+              <a class="dropdown-item" href="/how_a_mobile_with_an_IMEI_number_can_benefit_you/">How a Mobile with an IMEI Number Can Benefit You</a>
+              <a class="dropdown-item" href="/faq_about_UDID/">UDID: Frequently Asked Questions about iPhone UDID Numbers</a>
+            </div>
+          </div>
+        </li>
+        <!--
+        <li class="nav-item pay_pal d-block d-lg-none d-xl-none">
+          <button onclick="document.location='https://earlyapps.me/?donation=1'" class="paypal"> 
+            <span> Support us via </span>
+            <img src="/static/img/paypal_withborder.svg" alt="paypal">
+          </button>
+        </li>
+        -->
+      </ul>
+    </div>
+    <!--
+    <div class="pay_pal d-none d-lg-block d-xl-block">
+      <button onclick="document.location='https://earlyapps.me/?donation=1'" class="paypal"> 
+      <span> Support us via </span>
+          <img src="/static/img/paypal_withborder.svg" alt="PayPal">
+      </button>
+    </div>
+    -->
+  </nav>
+  </div> 
+</div>
+</header>
+<div class="container-fluid">
+    <div class="bg-udid-form">
+        <div class="udid-form row container device_info pt-5 mx-auto justify-content-center px-4 mb-5">
+            <h1 class="col-9 col-xl-12 col-lg-12 align-self-right px-0 pt-4 mb-4 mx-auto">Here’s your device info </h1>
+            <p class="col-xl-12 col-lg-12 pt-2 pl-3 mb-4">Tap any field to copy it</p>
+            <div class="col-xl-12 col-lg-12 pt-1 px-3 mb-2">
+                <h3 class="d-block d-xl-none d-lg-none d-md-none d-sm-none mx-auto col-3 m mb-1">UDID</h3>
+                <h3 class="d-xl-block d-lg-block d-md-block d-sm-block d-none col-3 mx-auto pl-lg-0 p-xl-0 mb-1">
+                    UDID</h3>
+                <div id="udid" class="info-input" onclick="copyOne(event);">4e125b58bfc0e9f3e34e074ea16b81051b20e0d8</div>
+            </div>
+            <div class="col-xl-12 col-lg-12 pt-1 px-3 mb-2">
+                <h3 class="d-block d-xl-none d-lg-none d-md-none d-sm-none col-3 ml-0 mx-auto pl-lg-0 p-xl-0 mb-1">
+                    IMEI</h3>
+                <h3 class="d-xl-block d-lg-block d-md-block d-sm-block d-none col-3 mx-auto pl-lg-0 p-xl-0 mb-1">
+                    IMEI</h3>
+                <div id="imei" class="info-input" onclick="copyOne(event);"></div>
+            </div>
+            <div class="col-xl-12 col-lg-12 pt-1 px-3 mb-2">
+                <h3 class="d-block d-xl-none d-lg-none d-md-none d-sm-none col-12 ml-0  mx-auto pl-lg-0 p-xl-0 mb-1">
+                    PRODUCT / OS VERSION</h3>
+                <h3 class="d-xl-block d-lg-block d-md-block d-sm-block d-none col-6 mx-auto pl-lg-0 p-xl-0 mb-1">PRODUCT
+                    / OS VERSION</h3>
+                <div id="os-version" class="info-input" onclick="copyOne(event);">iPhone8,1
+                    / 19E5225g</div>
+            </div>
+            <div class="col-xl-12 col-lg-12 pt-1 px-3 mb-4">
+                <h3 class="d-block d-xl-none d-lg-none d-md-none d-sm-none col-6 ml-0 mx-auto pl-lg-0 p-xl-0 mb-1">
+                    SERIAL NUMBER</h3>
+                <h3 class="d-xl-block d-lg-block d-md-block d-sm-block d-none col-6 mx-auto pl-lg-0 p-xl-0 mb-1">SERIAL
+                    NUMBER</h3>
+                <div id="serial-number" class="info-input" onclick="copyOne(event);">FK1QFTK2GRY9</div>
+            </div>
+            <div class="pt-1 mx-auto mb-4">
+                <button class="col-12 button-sendit px-0 mx-auto">
+                    <div class="sendit">
+                        Send it via email
+                    </div>
+                </button>
+            </div>
+            <button class="col-12 button-copy rounded-pill button ">
+                <div class="col-6 mx-auto copy-button">
+                    <div onclick="copyAll(event);">Copy all info</div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <!--
+    <div class="bg-enj">
+        <div class="d-block d-xl-none d-lg-none container enjoy enj justify-content-center pt-5 mx-auto mb-1">
+            <h1 class="col-lg-12 col-md-12 col-11 px-0 mb-0 pt-2 mx-auto text-center mb-3">Enjoy our service? Support us</h1>
+            <p class="col-10 text-center mb-4 mx-auto"> Your donations empowers us to continue our work. </p>
+            <div class="row pt-2 px-0">
+                <button class="paypal">
+                    <a> Support us via </a>
+                    <img src="/static/img/paypal_withborder.svg" alt="PayPal">
+                </button >
+            </div>
+            <img class="einstein img-fluid mb-4" src="/static/img/einstein.svg" alt="">
+            </div>
+        </div>
+        Desktop enjoy start
+        <div class="container-fluid">
+            <div class="bg-enj">
+                <div class="d-lg-block d-xl-block d-none container enjoy mb-5 pl-lg-5 pl-xl-5">
+        <div class="row pt-4 pt-lg-5 pt-xl-5 pl-lg-4 pl-xl-4 mb-lg-n5">
+            <div class="enjoy-text container col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-center pl-lg-4 pl-xl-4 mb-5 pt-3 pt-lg-1 pt-xl-1">
+                <h1 class=" col-lg-12 col-md-12mb-lg-4 mb-xl-4 mb-3 pt-4 pt-lg-0 pt-xl-0 mx-auto">Enjoy our service?</h1>
+                    <div class="row">
+                        <p class="col-10 col-lg-12 col-xl-12 mb-5 mx-auto">We believe dev tools should be free. That’s why we don’t want to charge for our service. But frankly, it would be quite hard to keep it up without your help. If you share our ideals, please support us today.</p>
+
+                    </div>
+
+                <button onclick="document.location='https://earlyapps.me/?donation=1'" class="paypal mt-n2">
+                    <a>Support us via</a>
+                    <img src="/static/img/paypal_withborder.svg" alt="PayPal">
+                </button >
+            </div>
+            <div class="col-lg-6 col-xl-6 d-none d-lg-block d-xl-block">
+                <img class="img-einstein mt-n4 mb-n4" src="/static/img/einstein.svg" alt="">
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+       Desktop enjoy end -->
+
+    <div class="row mx-auto justify-content-center container spread">
+        <h1 class="col-10 pt-5 mb-4">
+            Spread the word
+        </h1>
+        <a class="mb-3 " href="https://twitter.com/home">
+            <img class="tw-btn" src="/static/img/tweet_button.svg" alt="Spread the word in Twitter">
+        </a>
+        <p class="mt-3 col-11">You motivate us to make Udid.tech better every day! :)</p>
+    </div>
+</div>
+
+<footer>
+    <hr class="line">
+<div class="first-row">
+    <div class="container">
+        <div class="row pt-lg-5 pt-xl-5 pt-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 pt-2 pl-2">
+                <h1 class="get mb-2">Get UDID for free! </h1>
+                <p class="iTunes mb-3">No iTunes required.</p>
+            </div>
+            <div class="offset-sm-6 offset-md-6 offset-lg-6 offset-xl-3 col-sm-6 col-md-6 col-lg-6 col-xl-3 d-flex  mb-3 justify-content-center pt-3 ">
+                <button class="how-it-works">
+                    <a href="/how_does_it_work/"> Check how it works </a>
+                </button>
+            </div>
+            <!--
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 d-flex justify-content-center pay_pal pt-3 mb-5"> 
+                    <button onclick="document.location='https://earlyapps.me/?donation=1'" class="paypal">
+                        <span> Support us via </span>
+                        <img src="/static/img/paypal_withborder.svg" alt="PayPal">
+                    </button >
+                </div>
+                -->
+        </div>
+    </div>
+    <div class="col-10 col-sm-12 col-md-12 d-lg-none d-xl-none secline">
+        <hr class="line mb-4">
+    </div>
+    <!-- Mobile! -->
+    <div class="menu-containers-mobile d-block d-lg-none d-xl-none ">
+        <div class="container">
+            <div class="col-10 col-sm-10 col-md-12 col-lg-6 col-xl-5 pt-1 pl-4">
+                <ul>
+                    <li class="contact-us"> Contact us: </li>
+                    <li>
+                        <a href="mailto:hello@udid.tech">hello@udid.tech</a>
+                    </li>
+                    <li class="pt-2">
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/how_does_it_work/">How does it work?</a>
+                    </li>
+                    <li>
+                        <a href="/api_for_developers/">API for Developers</a>
+                    </li>
+                    <li>
+                        <a href="/terms/">Terms of Service</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="/privacy_policy/">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <a class="twitter pl-2 pr-2 mr-2" href="https://twitter.com/udid_tech"><img src="/static/img/twitter.svg" alt="Twitter"></a> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="container-fluid copyright mt-2 ">
+            <div class="row justify-content-center container pt3">
+                <div class="col-9 pt-2">
+                    ©udid.tech 2015–2021. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-containers d-none d-lg-block d-xl-block ">
+        <div class="container">
+            <div class="row">
+                <div class=" col-10 col-sm-12 col-md-12 col-lg-5 col-xl-">
+                    <div class="first-container">
+                        <div class="contact">
+                            <ul>
+                                <li class="us"> Contact us: </li>
+                                <li> <a href="mailto:hello@udid.tech">hello@udid.tech </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="second-container">
+                        <ul>
+                            <li>
+                                <a href="/about/">About</a>
+                            </li>
+                            <li>
+                                <a href="/how_does_it_work/">How does it work?</a>
+                            </li>
+                            <li>
+                                <a href="/api_for_developers/">API for Developers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="third-container">
+                        <ul>
+                            <li>
+                                <a href="/terms/">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="/privacy_policy/">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="fourth-container">
+                        <ul class="images">
+                            Social Media
+                            <div class="row">
+                                <li class="twitter">
+                                    <a href="https://twitter.com/udid_tech"><img src="/static/img/twitter.svg" alt="Twitter"></a> 
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright container-fluid">
+            <div class="container">
+                ©udid.tech 2015–2021. All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<div class="modal fade" id="email-sender-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="email-sender-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding-top: 0 !important;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="email-sender-modal-label">Send email to</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body sign-up">
+                <div class="col-12 col-sm-12 inputBox emailbox mx-md-auto  ml-xl-0 px-0 mb-2">
+                    <input id="email-sender-modal__input-email" class="col-12" type="text" placeholder="johndoe@email.com">
+                </div>
+            </div>
+            <div class="modal-footer device_info" style="padding-bottom: 0.75rem !important; padding-top: 0 !important;">
+                <button id="email-sender-modal__btn" class="col-12 button-sendit px-0 mx-auto">
+                    <div class="checkmark" style="display: none;"></div>
+                    <div id="email-sender-modal__btn-txt" class="sendit">Send</div>
+                    <div id="email-sender-modal__btn-loader" class="pink-btn__loader"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/jquery/3.5.1/js/jquery.min.js"></script>
+<script src="/static/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/js/copy.js"></script>
+<script src="/static/js/burger.js"></script>
+<script>
+    $(function () {
+        var
+            $emailSenderModal = $('#email-sender-modal'),
+            $emailSenderModalBtn = $('#email-sender-modal__btn');
+
+        $emailSenderModalBtn.on('click', function () {
+            var
+                $emailSenderModalBtnLoader = $('#email-sender-modal__btn-loader'),
+                $emailSenderModalBtnTxt = $('#email-sender-modal__btn-txt'),
+                $emailSenderModalInputEmail = $('#email-sender-modal__input-email'),
+                $emailSenderModalBtnCheckmark = $emailSenderModalBtn.find('.checkmark');
+
+            $emailSenderModalInputEmail.prop('disabled', true);
+            $emailSenderModalBtn.css('background-color', '#FF95D5').prop('disabled', true);
+            $emailSenderModalBtnTxt.hide();
+            $emailSenderModalBtnLoader.show();
+
+            $.post('/send_device_info_email/', {
+                email: $emailSenderModalInputEmail.val(),
+                imei: $('.info-input#imei').text(),
+                product_and_os_version: $('.info-input#os-version').text(),
+                serial_number: $('.info-input#serial-number').text(),
+                udid: $('.info-input#udid').text()
+            }).done(function () {
+                $emailSenderModalBtnLoader.hide();
+                $emailSenderModalBtnCheckmark.show();
+            }).fail(function () {
+                setTimeout(function () {
+                    alert('Sorry, we can not send you email. Please, try again later.');
+                }, 1000);
+            }).always(function () {
+                setTimeout(function () {
+                    $emailSenderModal.modal('hide');
+                    $emailSenderModalInputEmail.prop('disabled', false).val('');
+                    $emailSenderModalBtnLoader.hide();
+                    $emailSenderModalBtnCheckmark.hide();
+                    $emailSenderModalBtnTxt.show();
+                    $emailSenderModalBtn.css('background-color', '').prop('disabled', false);
+                }, 500);
+            });
+        });
+
+        $('.button-sendit').on('click', function () {
+            $emailSenderModal.modal('show');
+        });
+    });
+</script>
+
+ </body>
+</html> 
