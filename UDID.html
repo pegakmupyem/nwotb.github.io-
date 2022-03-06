@@ -23,19 +23,14 @@
                 </p>
         </div>
 
-<div>
-  <input type="button" value="Copy Url" onclick="Copy();" />
-  <br /> Paste: <textarea id="url" rows="1" cols="30"></textarea>
-</div>
 <script>
-
 function Copy() {
   var Url = document.getElementById("url");
   Url.innerHTML = window.location.search;
   console.log(Url.innerHTML)
   Url.select();
   document.execCommand("copy");
-  alert('Url');
+  alert('window.location.search');
 }
 </script> 
     </body>
