@@ -19,5 +19,21 @@
 <button style="font-size:13px;" onclick="window.location.href = '/udid';">Вернуться на главную страницу</button>
                 </p>
         </div>
+
+<div>
+  <input type="button" value="Copy Url" onclick="Copy();" />
+  <br /> Paste: <textarea id="url" rows="1" cols="30"></textarea>
+</div>
+<script>
+
+function Copy() {
+  var Url = document.getElementById("url");
+  Url.innerHTML = window.location.href;
+  console.log(Url.innerHTML)
+  Url.select();
+  document.execCommand("copy");
+}
+
+</script> 
     </body>
 </html>
