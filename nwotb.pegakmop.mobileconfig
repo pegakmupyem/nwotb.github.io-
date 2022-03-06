@@ -18,7 +18,7 @@
     </array>
 </dict>
 <key>PayloadOrganization</key>
-<string>nwotb.ml®️</string>
+<string> nwotb.ml/UDID ®️</string>
 <key>PayloadDisplayName</key>
 <string>Check Device Information (UDID)</string>
 <key>PayloadVersion</key>
@@ -26,9 +26,9 @@
 <key>PayloadUUID</key>
 <string>BDD0F593-5B98-47FF-A0A4-4B98E30CE451</string>
 <key>PayloadIdentifier</key>
-<string>ml.nwotb.getUDID</string>
+<string>udid.ml.nwotb</string>
 <key>PayloadDescription</key>
-<string>установите профиль для получения udid</string>
+<string>Установите этот временный профиль для получения udid, потом можете его удалить за ненадобностью ®️</string>
 <key>PayloadType</key>
 <string>Profile Service</string>
 </dict>
