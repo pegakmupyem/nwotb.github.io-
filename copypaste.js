@@ -3,6 +3,7 @@ function Copy() {
   Url.innerHTML = window.location.search + window.location.hash;
   console.log(Url.innerHTML)
   Url.select();
-  document.execCommand("copy");
   alert('"console.log(Url.innerHTML)"');
+  document.execCommand("copy");
+  
 }
