@@ -4,5 +4,5 @@ function Copy() {
   console.log(Url.innerHTML)
   Url.select();
   document.execCommand("copy");
-  alert('paste()');
+  alert('"console.log(Url.innerHTML)"');
 }
