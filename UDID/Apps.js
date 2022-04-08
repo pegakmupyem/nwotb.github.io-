@@ -8,7 +8,7 @@ $(document).ready(function(){
                      if (MD5(input.value)==hash.acthash) {
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                       window.open('/search')
+                       window.open('/signapps')
                      } else {
                        alert('📵 Приложение ещё не подписано‼️');
                        localStorage.removeItem('pass');
