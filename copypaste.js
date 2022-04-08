@@ -5,5 +5,5 @@ function Copy() {
   Url.select();
   text = Url.select();
   document.execCommand("copy");
-  alert('UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена!');
+  alert('UDID скопирован в буфер обмена, мне отправьте содержимое буфера обмена!');
 }
