@@ -4,7 +4,6 @@ function Copy() {
   console.log(Url.innerHTML)
   Url.select();
   text = Url.select();
-  alert('paste()');
   alert('UDID скопирован в буфер обмена, отправьте содержимое буфера обмена!');
   document.execCommand("copy");
   alert('paste()');
