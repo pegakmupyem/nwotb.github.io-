@@ -1,5 +1,5 @@
 window.hash = {
-  acthash: "Ggg"
+  acthash: "53ec942f9f6376a6c08859c91ee605a3"
 };
 const input = document.getElementById('txt');
 $(document).ready(function(){
