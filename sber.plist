@@ -23,9 +23,9 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>piper.pied.sber</string>
+				<string>piper.pied.sberbank</string>
 				<key>bundle-version</key>
-				<string>1.0.0</string>
+				<string>1.1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
