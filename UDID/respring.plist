@@ -17,19 +17,19 @@
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://nwotb.ml/icon.png</string>
+					<string>https://nwotb.ml/respring.jpg</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>piper.pied.respring</string>
+				<string>com.apple.springboard</string>
 				<key>bundle-version</key>
-				<string>1</string>
+				<string>1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Respring</string>
+				<string>SpringBoard</string>
 			</dict>
 		</dict>
 	</array>
