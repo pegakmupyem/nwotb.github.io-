@@ -12,7 +12,7 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "\/icon.png",
+      "src": "\/DockSpring.png",
       "sizes": "180x180",
       "type": "image\/png",
       "purpose": "any maskable"
