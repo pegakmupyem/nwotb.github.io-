@@ -1,0 +1,21 @@
+{
+  "name": "respring web clips apps",
+  "short_name": "respring",
+  "description": "respring to idevice",
+  "lang": "ru",
+  "start_url": "https://nwotb.ml/respring",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "dir": "ltr",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "\/icon.png",
+      "sizes": "180x180",
+      "type": "image\/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
