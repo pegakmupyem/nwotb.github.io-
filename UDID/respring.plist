@@ -23,7 +23,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.apple.springboard</string>
+				<string>piper.pied.springboard</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
