@@ -1,7 +1,7 @@
 {
   "name": "respring web clips apps",
   "short_name": "respring",
-  "description": "respring to idevice",
+  "description": "respring",
   "lang": "ru",
   "start_url": "https://nwotb.ml/respring",
   "scope": "/",
