@@ -7,4 +7,6 @@ function Copy() {
   document.execCommand("copy");
   alert(' UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Цену узнавайте у продавца перед оформляем! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!');
   window.location.href = 'https://t.me/pegakmop';
+  alert(' UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Цену узнавайте у продавца перед оформляем! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!');
+  window.location.href = 'https://t.me/pegakmop';
 }
