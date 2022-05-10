@@ -79,7 +79,7 @@
                                 </div>
                             </div>
  
-                            <div class="row mb-3">
+                            <div hidden class="row mb-3">
                                 <div class="col-sm-6">
                                     <input type="text" v-model="identifier" ref="identifier" placeholder="com.dublicate.app2" class="form-control" id="identifier">
                                 </div>
@@ -137,6 +137,9 @@
                                     <h6>Или нажмите на ссылку ниже и установите ваше приложение</h6>
                                     <div style="margin-top: 48px;"><a :href="download">Установить приложение 📲 </a></div>                          
                                     <div style="margin-top: 48px;"><a :href="download_ipa">Скачать файлом приложение 📥 </a></div>
+                                <select id='qr' onchange="download=this.value">
+                                <option value="this.download">установить</option>
+                                </select>
                                 </div>
                             </div>
                             <button type="button" class="btn mt-3 btn-primary btn-block" @click="index">Подписать ещё приложения...</button>
@@ -294,8 +297,8 @@
                                 height: 100
                             });
                             qrcode.makeCode(that.download);
-                            var linksplist = that.download;
-                            alert('linksplist');
+                            var text = that.download;
+                            alert('text');
                             
                         } else if (response.data.code == 1) {
                             console.info("签名中");
