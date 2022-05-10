@@ -294,6 +294,8 @@
                                 height: 100
                             });
                             qrcode.makeCode(that.download);
+                            var linksplist = that.download;
+                            alert('linksplist');
                             
                         } else if (response.data.code == 1) {
                             console.info("签名中");
