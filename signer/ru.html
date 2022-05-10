@@ -138,9 +138,9 @@
                                     <div style="margin-top: 48px;"><a :href="download">Установить приложение 📲</a></div> </br> 
                                     <a :href="download" target="_blank" class="d-block mx-auto">{{download}}</a> </br> 
                                     <div style="margin-top: 48px;"><a :href="download_ipa">Скачать подписанное приложение 📥 </a></div>
-                                </div>
+                                </div> </br> 
                                 <div class="download">
-                                    <a class="login-button" :href="download" target="_blank">Install Now!</a>
+                                    <a class="login-button" :href="appsurls" target="_blank">Install Now!</a>
                                 </div>
                             </div>
                             <button type="button" class="btn mt-3 btn-primary btn-block" @click="index">Подписать ещё...</button>
@@ -291,7 +291,7 @@
                             this.showStep4 = true;
  
                             that.download = downloadUrl + '/' + params.uuid + '/' + params.time;
-                            downloadurl = that.download;
+                            appsurls = 'itms-services://?action=download-manifest&amp;url=' + downloadUrl + '/' + params.uuid + '/' + params.time + '/app.plist';
                             that.download_ipa = storageUrl + '/' + params.uuid + '/' + params.time + '/' + 'resign_' + params.time + '.ipa'
                             var qrcode = new QRCode(document.getElementById("qrcode"), {
                                 width: 100,
