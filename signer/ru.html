@@ -291,13 +291,14 @@
                             this.showStep4 = true;
  
                             that.download = downloadUrl + '/' + params.uuid + '/' + params.time;
+                            downloadurl = that.download;
                             that.download_ipa = storageUrl + '/' + params.uuid + '/' + params.time + '/' + 'resign_' + params.time + '.ipa'
                             var qrcode = new QRCode(document.getElementById("qrcode"), {
                                 width: 100,
                                 height: 100
                             });
                             qrcode.makeCode(that.download);
-                            alert('that.download');
+                            
                         } else if (response.data.code == 1) {
                             console.info("签名中");
                             setTimeout("this.status()", "3000");
