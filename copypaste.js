@@ -11,6 +11,6 @@ function Copy() {
 			setTimeout(function(){
                                 alert(' 3 UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!');
                                 window.location.href = 'https://t.me/pegakmop';
-			},1111)
+			},3333)
             }
 }
