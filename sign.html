@@ -59,7 +59,7 @@
                                     <div class="custom-file b-form-file is-invalid" v-bind:class="ipaCss">
                                         <input type="file" @change="getFile($event)" ref="ipa" required="required" accept=".ipa" aria-required="true" class="custom-file-input" v-bind:class="ipaCss" id="ipa" style="z-index: -5;">
                                         <label data-browse="Browse" class="custom-file-label" for="ipa">
-                                            <span class="d-block form-file-text" style="pointer-events: none;">{{ ipaText }}</span>
+                                            <span class="d-block form-file-text" style="pointer-events: none;">Choose .ipa file or drop it here...</span>
                                         </label>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                                     <div class="custom-file b-form-file is-invalid" v-bind:class="p12Css">
                                         <input type="file" @change="getFile($event)" ref="p12" required="required" accept=".p12" aria-required="true" class="custom-file-input" v-bind:class="p12Css" id="p12" style="z-index: -5;">
                                         <label data-browse="Browse" class="custom-file-label" for="p12">
-                                            <span class="d-block form-file-text" style="pointer-events: none;">{{ p12Text }}</span>
+                                            <span class="d-block form-file-text" style="pointer-events: none;">Choose .p12 file or drop it here...</span>
                                         </label>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                     <div class="custom-file b-form-file" v-bind:class="mobCss">
                                         <input type="file" ref="mob" @change="getFile($event)" required="required" accept=".mobileprovision" aria-required="true" class="custom-file-input" v-bind:class="mobCss" id="mobileprovision" style="z-index: -5;">
                                         <label data-browse="Browse" class="custom-file-label" for="mobileprovision">
-                                            <span class="d-block form-file-text" style="pointer-events: none;">{{ mobText }}</span>
+                                            <span class="d-block form-file-text" style="pointer-events: none;">Choose .mobileprovision file or drop it here...</span>
                                         </label>
                                     </div>
                                 </div>
@@ -101,13 +101,13 @@
                             </div>
  
                             <div class="row mb-3">
-                                <div class="col-sm-6">
+                                <div hidden class="col-sm-6">
                                     <label class="form-control">
                                         <span>Delete dynamic library</span>
                                         <div style="display: inline-block; float: right"><input type="radio" name="radio" value="1" v-model="unlockValue"> Yes</div>
                                     </label>
                                 </div>
-                                <div class="col-sm-6">
+                                <div hidden class="col-sm-6">
                                     <label class="form-control">
                                         <span>Delete dynamic library</span>
                                         <div style="display: inline-block; float: right"><input type="radio" name="radio" value="0" v-model="unlockValue"> No</div>
