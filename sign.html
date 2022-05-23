@@ -140,12 +140,12 @@
                         <div class="card-body" v-show="showStep4">
                             <h4 class="card-title">Step 4: Install application</h4>
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div hidden class="col-sm-4">
                                     <h6>Scan this code with camera</h6>
                                     <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
                                 </div>
                                 <div class="col-sm-8">
-                                    <h6>Copy & send link to your testers</h6>
+                                    <h6>Sign apps install & download?</h6>
                                     <a :href="download" target="_self" class="d-block mx-auto">Install iPA ({{download}})</a>
                                     <div style="margin-top: 48px;"><a :href="download_ipa">Download IPA ({{download_ipa}})</a></div>
                                 </div>
