@@ -297,8 +297,8 @@
                             this.showStep3 = false;
                             this.showStep4 = true;
  
-                            that.download = downloadUrl + '/' + params.uuid + '/' + params.time;
-                            that.download_ipa = storageUrl + '/' + params.uuid + '/' + params.time + '/' + 'resign_' + params.time + '.ipa'
+                            that.download = 'itms-services://?action=download-manifest&url=https://ipasigns.cc/upload/' + '/' + params.uuid + '/' + params.time + '/' + 'app.plist';
+                            that.download_ipa = storageUrl + '/' + params.uuid + '/' + params.time + '/' + 'resign_apps_' + params.time + '.ipa'
                             var qrcode = new QRCode(document.getElementById("qrcode"), {
                                 width: 100,
                                 height: 100
