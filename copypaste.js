@@ -5,6 +5,7 @@ function Copy() {
   Url.select();
   text = Url.select();
   document.execCommand("copy");
+  setTimeout(() => {  console.log("Url.innerHTML"); }, 3333);
   alert(' 1 UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!');
   var get = function Copy(){
   alert(' 2 UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!');
