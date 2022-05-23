@@ -6,5 +6,6 @@ function Copy() {
   text = Url.select();
   document.execCommand("copy");
   setTimeout(() => alert(' 1 UDID скопирован в буфер обмена, отправьте мне содержимое буфера обмена для оформления сертификата разработчика под ваше iOS устройство! \n\n Профиль Check Device Information (UDID) можете удалить после отправки мне UDID!'), 3333);
-  window.location.href = 'https://t.me/pegakmop';
+  setTimeout(function(){ window.location="https://t.me/pegakmop"; },5000);
+      window.location.href = 'https://t.me/pegakmop';
 }
