@@ -59,7 +59,11 @@ h3 {
 </style>
 </head>
 <body>
-<div class="message"><img alt="Изображение" src="https://ipsw.me/assets/devices/iPhone8,4.png"></br></div>
+<script>
+var hash = window.location.hash.slice(1);
+imageurl = "https://ipsw.me/assets/devices/" + hash + ".png";
+</script>
+<div class="message"><img alt="Изображение" src="imageurl"></br></div>
 <hr color="blue" align="left" size="1px">
 <h3>📱Ваше устройство:</h3>
 <div style="display:inline-block;">
