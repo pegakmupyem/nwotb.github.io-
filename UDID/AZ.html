@@ -9,9 +9,11 @@ $(document).ready(function(){
      function(json, status){
 
             var data = json.data;
+            alert(data);
             var quotes = data.quotes;
+            alert(quotes);
             var usd = quotes.USD;
-
+            alert(usd);
 
             console.log(JSON.stringify(quotes));
             console.log(JSON.stringify(data.name));
