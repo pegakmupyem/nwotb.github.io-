@@ -10,9 +10,9 @@ $(document).ready(function(){
     $("button").click(function(){
         $.get("https://api.ipsw.me/v4/device/iPhone8,4?type=ipsw",                      
      function(response) {
-            var a = response.firmwares;
-            alert(a);
-	    var firmwares = JSON.stringify(a);
+            var firmwares = response.firmwares;
+            alert(firmwares);
+	    var firmwares = JSON.stringify(firmwares);
             alert(firmwares);
 
             var name = json.name;
