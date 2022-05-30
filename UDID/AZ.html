@@ -13,13 +13,15 @@ $(document).ready(function(){
             var firmwares = firmwares;
             alert(firmwares);
             var identifier = firmwares.identifier;
-            alert(usd);
+            alert(identifier);
 
             console.log(JSON.stringify(name));
-            console.log(JSON.stringify(firmwares));
             console.log(JSON.stringify(firmwares.identifier));
+            console.log(JSON.stringify(firmwares));
 
-            $("#container").append(data.name+"<br>");
+            $("#container").append(json.name+"<br>");
+$("#container").append(json.firmwares+"<br>");
+          $("#container").append(firmwares.identifier+"<br>");
 
         });
     });
