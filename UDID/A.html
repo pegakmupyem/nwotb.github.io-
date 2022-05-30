@@ -47,7 +47,15 @@
   <script>
     function ilonaKep() {
       var hash = window.location.hash.slice(1);
-      
+      if(hash == null) {
+  // Hash exists
+        alert('if');
+      } else {
+  // Hask doesn't exist
+        alert('else');
+      }
+
+
       var itools = "https://api.ipsw.me/v4/device/" + hash + "?type=ipsw";
       var frame = document.querySelector('.frame');
       var ilona = document.createElement("IMG");
