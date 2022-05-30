@@ -48,20 +48,17 @@
     function ilonaKep() {
       var hash = window.location.hash.slice(1);
       if (hash == "") {
-  // Hash exists
-        alert('if');
+  // Hash пустой
       } else {
-  // Hask doesn't exist
-        alert('else');
-      }
-
-
+  // Hask что-то есть
       var itools = "https://api.ipsw.me/v4/device/" + hash + "?type=ipsw";
       var frame = document.querySelector('.frame');
       var ilona = document.createElement("IMG");
       ilona.src = "https://ipsw.me/assets/devices/" + hash + ".png";
       ilona.width = "111";
       frame.appendChild(ilona);
+      }
+// script 
     }
 
     ilonaKep()
