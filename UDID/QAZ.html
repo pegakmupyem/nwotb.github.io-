@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>nwotb.ml UDID Registration</title>
+    <meta name="viewport" content="width=device-width" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("https://api.ipsw.me/v4/device/iPhone8,4?type=ipsw",                      
+     function(response) {
+            var a = response.firmwares;
+            alert(a);
+	    var firmwares = JSON.stringify(a);
+            alert(firmwares);
+
+            var name = json.name;
+            alert(name);
+            var identifier = json.identifier;
+            alert(identifier);
+            var firmwares = json.firmwares;
+            alert(firmwares);
+
+            console.log(JSON.stringify(name));
+            console.log(JSON.stringify(identifier));
+            console.log(JSON.stringify(firmwares));
+
+            $("#container").append(json.name+"<br>");
+$("#container").append(json.identifier+"<br>");
+          $("#container").append(json.firmwares+"<br>");
+
+        });
+    });
+});
+</script>
+</head>
+<body> <center> 
+
+<button>Подробнее об устройстве</button>
+
+<div id="container" ></div>
+</center> 
+</body>
+</html>
