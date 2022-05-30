@@ -8,10 +8,10 @@ $(document).ready(function(){
         $.get("https://api.ipsw.me/v4/device/iPhone8,4?type=ipsw",                      
      function(json, status){
 
-            var data = json.data;
-            alert(data);
-            var quotes = data.quotes;
-            alert(quotes);
+            var name = json.name;
+            alert(name);
+            var firmwares = data.firmwares;
+            alert(firmwares);
             var usd = quotes.USD;
             alert(usd);
 
