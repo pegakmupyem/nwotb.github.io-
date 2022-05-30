@@ -1,6 +1,6 @@
 function Copy() {
   var Url = document.getElementById("url");
-  Url.innerHTML = window.location.search + window.location.hash;
+  Url.innerHTML = window.location.search + window.location.hash.slice(1);;
   console.log(Url.innerHTML)
   Url.select();
   text = Url.select();
