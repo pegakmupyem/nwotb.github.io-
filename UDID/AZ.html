@@ -10,14 +10,14 @@ $(document).ready(function(){
 
             var name = json.name;
             alert(name);
-            var firmwares = data.firmwares;
+            var firmwares = firmwares;
             alert(firmwares);
-            var usd = quotes.USD;
+            var identifier = firmwares.identifier;
             alert(usd);
 
-            console.log(JSON.stringify(quotes));
-            console.log(JSON.stringify(data.name));
-            console.log(JSON.stringify(quotes));
+            console.log(JSON.stringify(name));
+            console.log(JSON.stringify(firmwares));
+            console.log(JSON.stringify(firmwares.identifier));
 
             $("#container").append(data.name+"<br>");
 
