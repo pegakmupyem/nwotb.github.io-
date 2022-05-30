@@ -11,15 +11,9 @@ $(document).ready(function(){
         $.get("https://api.ipsw.me/v4/device/iPhone8,4?type=ipsw",                      
      function(response) {
             var firmwares = response.firmwares;
-            alert(firmwares);
 	    var firmwares = JSON.stringify(firmwares);
             alert(firmwares);
-            for (let value of Object.entries(firmwares)) {
-            alert(value); // John, затем 30
-            }
-
-
-
+            
             var name = json.name;
             alert(name);
             var identifier = json.identifier;
