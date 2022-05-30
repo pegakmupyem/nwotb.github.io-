@@ -13,18 +13,18 @@ $(document).ready(function(){
 
             var name = json.name;
             alert(name);
-            var firmwares = json.firmwares;
+            var identifier = json.identifier;
             alert(firmwares);
-            var identifier = firmwares.identifier;
+            var firmwares = json.firmwares;
             alert(identifier);
 
             console.log(JSON.stringify(name));
-            console.log(JSON.stringify(json.firmwares));
-            console.log(JSON.stringify(firmwares.identifier));
+            console.log(JSON.stringify(identifier));
+            console.log(JSON.stringify(firmwares));
 
             $("#container").append(json.name+"<br>");
-$("#container").append(json.firmwares+"<br>");
-          $("#container").append(firmwares.identifier+"<br>");
+$("#container").append(json.identifier+"<br>");
+          $("#container").append(json.firmwares+"<br>");
 
         });
     });
