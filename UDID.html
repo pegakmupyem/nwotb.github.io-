@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>nwotb.ml UDID Registration</title>
     <meta name="viewport" content="width=device-width" />
-    <script src="alert.js"></script>
-    <script src="UDID.js"></script>
+    <script src="UDIDopen.js"></script>
+    <script src="UDIDicon.js"></script>
+    <script src="UDIDcopy.js"></script>
     <style>
         body {
             background-image: url("//nwotb.ml/icon.png");
@@ -18,9 +18,7 @@
             color: silver;
         }
     </style>
-
 </head>
-
 <body>
 
   <figure class='frame'>
@@ -29,7 +27,7 @@
 
     <div> 
  
-        <h2>1) Узнать мой UDID?</h2>
+        <h1>1) Узнать мой UDID?</h1>
  
         <button style="font-size:13px;" onclick="get()">Установить профиль 📲</button>
  
@@ -40,22 +38,8 @@
             Ваш UDID и название вашего устройства: </br><textarea id="url" rows="2" cols="48"></textarea>
         </div>
     </div>
-    <script src="alert.js"></script>
-    <script src="UDID.js"></script>
-
-
-  <script>
-    function ilonaKep() {
-      var hash = window.location.hash.slice(1);
-      var frame = document.querySelector('.frame');
-      var ilona = document.createElement("IMG");
-      ilona.src = "https://ipsw.me/assets/devices/" + hash + ".png";
-      ilona.width = "111";
-      frame.appendChild(ilona);
-    }
-
-    ilonaKep()
-  </script>
+    <script src="UDIDopen.js"></script>
+    <script src="UDIDicon.js"></script>
+    <script src="UDIDcopy.js"></script>
 </body>
-
 </html>
