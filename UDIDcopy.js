@@ -1,7 +1,7 @@
 function Copy() {
   var hash = window.location.hash.slice(1);
   if (hash == "") {
-  alert(' Установите для начала профиль Check Device Information (UDID)! \n Потом нажимайте кнопку отправить!');
+  alert(' Установите для начала наш профиль: Check Device Information (UDID)! \n Потом нажимайте кнопку отправить!');
   } else {
   var Url = document.getElementById("url");
   Url.innerHTML = window.location.search + window.location.hash;
