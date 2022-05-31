@@ -1,5 +1,6 @@
 function Copy() {
   if (hash == "") {
+  alert(Установите профиль для начала!);
   } else {
   var Url = document.getElementById("url");
   Url.innerHTML = window.location.search + window.location.hash;
