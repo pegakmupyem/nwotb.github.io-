@@ -1,4 +1,5 @@
 function Copy() {
+  var hash = window.location.hash;
   if (hash == "") {
   alert('Установите профиль для начала!');
   } else {
