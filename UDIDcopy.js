@@ -13,3 +13,4 @@ function Copy() {
   setTimeout(function(){ window.location="https://t.me/pegakmop"; },1500);
   }
 }
+Copy()
