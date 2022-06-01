@@ -1,4 +1,4 @@
-    function Copy() {
+    function ilonaKep() {
       var hash = window.location.hash.slice(1);
       if (hash == "") {
       } else {
@@ -17,4 +17,4 @@
       setTimeout(function(){ window.location="https://t.me/pegakmop"; },4444);
       } 
     }
-    Copy()
+    ilonaKep()
