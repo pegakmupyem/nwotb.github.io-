@@ -17,7 +17,7 @@ function Copy() {
 			setTimeout(function(){
                                 alert("A теперь откройте приложение ⚙️НАСТРОЙКИ и установите загруженный профиль Check Device Information (UDID) либо в следующем запросе разрешить нажмите и откроется меню настроек с установкой загруженного профиля Check Device Information (UDID)");
                                 window.location.href = '/open.mobileprovision';	
-			},1111)
+			},1500)
   } else {
   var Url = document.getElementById("url");
   Url.innerHTML = window.location.search + window.location.hash;
