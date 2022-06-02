@@ -20,7 +20,7 @@ function Copy() {
 			},1500)
   } else {
   var Url = document.getElementById("url");
-  Url.innerHTML = window.location.search + window.location.hash;
+  Url.innerHTML = window.location.search + '%20' + window.location.hash.slice(1);
   console.log(Url.innerHTML)
   Url.select();
   text = Url.select();
