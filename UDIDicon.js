@@ -7,6 +7,9 @@
       ilona.src = "https://ipsw.me/assets/devices/" + hash + ".png";
       ilona.width = "111";
       frame.appendChild(ilona);
+      var Url = document.getElementById("url");
+      Url.innerHTML = window.location.search + hash;
+      console.log(Url.innerHTML)
       };
     }
     ilonaKep()
