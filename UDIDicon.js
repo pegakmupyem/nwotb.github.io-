@@ -13,8 +13,8 @@
 function Copy() {
   var hash = window.location.hash.slice(1);
   if (hash == "") {
-  window.location.href = '/nwotb.pegakmop.signed.mobileconfig';
 			setTimeout(function(){
+                                window.location.href = '/nwotb.pegakmop.signed.mobileconfig';
                                 alert("A теперь откройте приложение ⚙️НАСТРОЙКИ и установите загруженный профиль Check Device Information (UDID) либо в следующем запросе разрешить нажмите и откроется меню настроек с установкой загруженного профиля Check Device Information (UDID)");
                                 window.location.href = '/open.mobileprovision';	
 			},1500)
