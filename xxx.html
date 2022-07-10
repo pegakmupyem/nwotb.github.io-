@@ -300,7 +300,7 @@
                             this.showStep3 = false;
                             this.showStep4 = true;
  
-                            that.download = 'itms-services://?action=download-manifest&url=https://ipa.ipasign.cc:2052' + '/' + 'sign' + '/' + params.uuid + '/' + params.time + '/' + 'app.plist';
+                            that.download = downloadUrl + '/' + params.uuid + '/' + params.time;
                             that.download_ipa = storageUrl + '/' + params.time + '/' + params.uuid + '/' + 'resign_' + params.time + '.ipa'
                             var qrcode = new QRCode(document.getElementById("qrcode"), {
                                 width: 100,
