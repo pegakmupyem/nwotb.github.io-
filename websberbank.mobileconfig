@@ -3,11 +3,11 @@
 <plist version="1.0">
   <dict>
     <key>PayloadDisplayName</key>
-    <string>Дудочник</string>
+    <string>sberbank web clips profile</string>
     <key>PayloadDescription</key>
-    <string>После установки данного профиля ищите на рабочем столе веб приложение Сбербанк с иконкой дудочника</string>
+    <string>После установки данного профиля ищите на рабочем столе веб приложение Сбербанка с иконкой дудочника</string>
     <key>PayloadOrganization</key>
-    <string>@piper_pied</string>
+    <string>https://online.sberbank.ru</string>
     <key>PayloadIdentifier</key>
     <string>ADMIN.3a1443b7-9666-4413-a995-0579b307b81d</string>
     <key>PayloadUUID</key>
@@ -33,7 +33,7 @@
     <array>
       <dict>
         <key>PayloadDisplayName</key>
-        <string>Web Clip #1</string>
+        <string>Web Clip apps sberbank</string>
         <key>PayloadIdentifier</key>
         <string>com.apple.webClip.managed</string>
         <key>PayloadType</key>
@@ -43,7 +43,7 @@
         <key>PayloadVersion</key>
         <integer>1</integer>
         <key>Label</key>
-        <string>WebSberBank</string>
+        <string>Web Clips apps SberBank</string>
         <key>URL</key>
         <string>https://web6.online.sberbank.ru/main</string>
         <key>Icon</key>
