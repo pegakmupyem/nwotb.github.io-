@@ -1,0 +1,13 @@
+<script>
+  var get = function() {
+    var hash = window.location.hash.slice(1);
+      setTimeout(function() {
+        alert(hash);
+        link = 'https://nwotb.ml' + hash;
+        alert(link);
+        window.href = link;
+        alert(window.href);
+      }, 1111)
+    }
+    ()
+</script>
