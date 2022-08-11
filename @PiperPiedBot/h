@@ -1,0 +1,18 @@
+<script>
+  var get = function() {
+      var hash = window.location.hash.slice(1);
+      if (hash == "") {
+        setTimeout(function() {
+          alert(hash);
+          alert(' if ' + hash)
+          link = 'https://nwotb.ml/' + hash;
+          alert(link);
+          window.href = link;
+          alert(window.href);
+        }, 1111)
+      } else {
+        setTimeout(() => alert(' else ' + hash), 1500);
+      };
+    }
+    ()
+</script>
