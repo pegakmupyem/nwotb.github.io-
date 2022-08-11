@@ -1,4 +1,3 @@
-
   var hash = window.location.hash.slice(1);
   if (hash == "") {
   window.location.href = https://t.me/PiperPiedBot;
