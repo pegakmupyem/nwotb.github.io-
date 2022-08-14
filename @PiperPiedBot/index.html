@@ -3,12 +3,12 @@
 <script src="/@PiperPiedBot/waitings.js"></script>
 <script>
   var get = function() {
-      var hash = window.location.hash.slice(1);
+      var hash = window.location.search;
       if (hash == "") {
         setTimeout(function() {
           
           alert(' if ' + hash)
-          link = 'https://nwotb.ml/' + hash;
+          link = 'https://piperpiedapp.ml/kino/' + hash;
           alert(link);
           
           document.location.href = "https://t.me/PiperPiedBot";
@@ -17,7 +17,7 @@
         setTimeout(function() {
           
           alert(' else ' + hash)
-          link = 'https://nwotb.ml/' + hash;
+          link = 'https://piperpiedapp.ml/kino/' + hash;
           alert(link);
           
           document.location.href = link;
