@@ -6,8 +6,8 @@
   "start_url": "https://nwotb.ml/calculator",
   "scope": "https://nwotb.ml/calculator",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
   "dir": "ltr",
   "orientation": "any",
   "icons": [
