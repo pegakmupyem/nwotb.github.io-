@@ -1,7 +1,7 @@
 {
-  "name": "Пегий Дудочник®️ от канала: @Piper_Pied",
-  "short_name": "Дудочник®️",
-  "description": "веб приложение нашего сайта для просмотра фильмов и сериалов без смс и регистрации",
+  "name": "wargaming.net shop премиум магазин вг",
+  "short_name": "WG Shop",
+  "description": "веб приложение сайта WG премиум магазина",
   "lang": "ru",
   "start_url": "https://nwotb.ml/wargaming",
   "scope": "https://ru.wargaming.net/shop/",
