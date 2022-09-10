@@ -2,24 +2,17 @@
 <script>
 var get = function() {
   var search = window.location.search;
-  var hash = window.location.hash;
-      if (search == hash == "") {
-        alert('search+hash');
-        setTimeout(function() {
-          document.location.href = "https://nwotb.ml/youtube";
-        }, 1111)
-      } else (search == hash){
-        alert('search=hash');
-        setTimeout(function() {
-        setTimeout(function() {
-          document.location.href = "https://nwotb.ml/youtube";
-        }, 1111)
+  var hash = window.location.hash.slice(1);;
+      if (hash == "") {
+        alert('hash = 0');
+      } else (search == ""){
+        alert('search = 0');
       } else {
         setTimeout(function() {
           link = 'https://yout.com/video/?url=' + search;
           document.location.href = link;
         }, 1111)
       }
-    }
-    ()
+}
+()
 </script></html>
