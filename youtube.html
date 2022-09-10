@@ -3,13 +3,11 @@
 var get = function() {
   var search = window.location.search;
   var hash = window.location.hash.slice(1);;
-      if (hash == "") {
-        alert('hash = 0');
-      } else (search == ""){
-        alert('search = 0');
+      if (hash == search) {
+        alert('hash = search = 0');
       } else {
         setTimeout(function() {
-          link = 'https://yout.com/video/?url=' + search;
+          link = 'https://yout.com/video/?url=' + search + hash;
           document.location.href = link;
         }, 1111)
       }
