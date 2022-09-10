@@ -3,16 +3,18 @@
 var get = function() {
   var search = window.location.search;
   var hash = window.location.hash;
-      if (search == "") {
+      if (search == hash == "") {
+        alert('search+hash');
         setTimeout(function() {
           document.location.href = "https://nwotb.ml/youtube";
         }, 1111)
       } else (search == hash){
+        alert('search=hash');
         setTimeout(function() {
         setTimeout(function() {
           document.location.href = "https://nwotb.ml/youtube";
         }, 1111)
-      } else (search == hash){
+      } else {
         setTimeout(function() {
           link = 'https://yout.com/video/?url=' + search;
           document.location.href = link;
