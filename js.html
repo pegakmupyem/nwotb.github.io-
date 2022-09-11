@@ -1,10 +1,5 @@
 <html>
 <script>
-var get = function() {
-  
-  tflink  = "itms-services://?action=download-manifest&url=" + hash
-}
-()
 
 /*
 IPA 文件安装器
@@ -13,9 +8,9 @@ IPA 文件安装器
 - 安装完成后请返回运行界面选择后续操作
 作者联系：https://t.me/axel_burks
 */
-var hash = window.location.hash.slice(1);;
+
 var port_number = 8080
-var plist_url = "itms-services://?action=download-manifest&url=" + hash
+var plist_url = "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/pegakmupyem/nwotb.github.io/main/jsbox_ipa_install.plist"
 
 $app.strings = {
   "en": {
