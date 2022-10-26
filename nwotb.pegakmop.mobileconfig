@@ -5,7 +5,7 @@
     <key>PayloadContent</key>
     <dict>
         <key>URL</key>
-        <string>https://udidios.000webhostapp.com/</string>
+        <string>https://signipasphp.000webhostapp.com/</string>
     <key>DeviceAttributes</key>
     <array>
         <string>UDID</string>
