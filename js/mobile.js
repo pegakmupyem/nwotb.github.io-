@@ -1,4 +1,4 @@
-<script>
+
 var isMobile = {
     Android: function() {
 		return navigator.userAgent.match(/Android/i);
@@ -23,13 +23,12 @@ var isMobile = {
 window.onload = checkMobile;
 function checkMobile (){
 	var browserType = isMobile.any()?"mobile":"not mobile";
-	document.getElementById("output").innerHTML = browserType;	
+	alert(browserType);	
 }
   checkMobile()
   
   function done() {
-  if (browsesType='mobile'){ alert('да');
-} else { alert('неtт');
+  if (browsesType='mobile'){ alert('мобила');
+} else { alert('комп');
 }}
   done()
-</script>
