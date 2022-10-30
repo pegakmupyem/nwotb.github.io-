@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<script>
+if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/iPod/i))) 
+
+    {
+
+        alert("Ipod or Iphone");
+        window.location.href = "https://nwotb.ml/ios.html";
+
+    }
+
+else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPad/i))  
+
+    {
+
+        alert("Ipad");
+        window.location.href = "https://nwotb.ml/ios.html";
+
+    }
+
+else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1)
+
+    {
+
+        alert("Safari");
+        window.location.href = "https://nwotb.ml/ios.html";
+
+    }
+
+else if (navigator.vendor == null || navigator.vendor != null)
+
+    {
+
+        alert("Not Apple Based Browser");
+        window.location.href = "https://nwotb.ml/android.html";
+
+    }
+</script>
+  </head>
+<body>
+
+  </body>
+</html>
