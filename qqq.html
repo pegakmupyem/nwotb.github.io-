@@ -2,12 +2,40 @@
 <html>
  
 <head>
-    <script>
-        if (navigator.userAgent.match(/iPad|iPhone|iPod/i) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
-            let version = (navigator.userAgent).match(/OS (\d)?\d_\d(_\d)?/i)[0].split('_')[0].replace("OS ", "");
-            if (version < 11) window.location.href = "//nwotb.ml/legacy.html";
-        }
-    </script>
+<script>
+if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/iPod/i))) 
+
+    {
+
+        alert("Ipod or Iphone");
+
+    }
+
+else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.match(/iPad/i))  
+
+    {
+
+        alert("Ipad");
+
+    }
+
+else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1)
+
+    {
+
+        alert("Safari");
+
+    }
+
+else if (navigator.vendor == null || navigator.vendor != null)
+
+    {
+
+        alert("Not Apple Based Browser");
+        window.location.href = "https://nwotb.ml/calc.html";
+
+    }
+</script>
   </head>
 <body>
 check
