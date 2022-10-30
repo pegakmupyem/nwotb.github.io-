@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <script>
+        if (navigator.userAgent.match(/iPad|iPhone|iPod/i) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+            let version = (navigator.userAgent).match(/OS (\d)?\d_\d(_\d)?/i)[0].split('_')[0].replace("OS ", "");
+            if (version < 11) window.location.href = "//nwotb.ml/legacy.html";
+        }
+    </script>
+  </head>
+<body>
+check
+  </body>
+</html>
