@@ -7,7 +7,7 @@ if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) &&
 
     {
 
-        alert("Ipod or Iphone");
+        alert("Ваше устройство: iPhone или iPod");
         window.location.href = "/ios.png";
 
     }
@@ -16,7 +16,7 @@ else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc
 
     {
 
-        alert("Ipad");
+        alert("Ваше устройство: iPad");
         window.location.href = "/ios.png";
 
     }
@@ -25,7 +25,7 @@ else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc
 
     {
 
-        alert("Safari Mac");
+        alert("Ваше устройство: Mac OS");
         window.location.href = "mac.png";
 
     }
@@ -34,15 +34,15 @@ else if (navigator.vendor == null || navigator.vendor != null)
 
     {
 
-        alert("Not Apple Based Browser");
+        alert("Ваше устройство не от компании Apple");
         function detect() {
           var isMobile = window.orientation > -1;
 	  var gettext = isMobile ? 'Mobile' : 'PC';
 	  if (gettext == 'Mobile') { 
-		alert('Android');
+		alert('Ваше устройство: 🤖 Android или прочие устройства');
                 window.location.href = "/android.png";
           } else { 
-		alert('Windows & Linux');
+		alert('Ваше устройство: Windows или Linux');
                 window.location.href = "/windows.png";
           };
         }
