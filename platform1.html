@@ -7,8 +7,8 @@
     Android: function() {
 		return navigator.userAgent.match(/Android/i);
 	},
-	BlackBerry: function() {
-		return navigator.userAgent.match(/BlackBerry/i);
+	Linux: function() {
+		return navigator.userAgent.match(/Linux/i);
 	},
 	iOS: function() {
 		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
@@ -20,13 +20,16 @@
 		return navigator.userAgent.match(/IEMobile/i);
 	},
 	any: function() {
-		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		return (isMobile.Android() || isMobile.Linux() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+	vse: function() {
+		return (isMobile.Linux() || isMobile.Opera() || isMobile.Windows());
 	}
 };
 
 window.onload = checkMobile;
 function checkMobile (){
-	var browserType = isMobile.any()?"mobile":"pc";
+	var browserType = isMobile.vse()?"mobile":"pc";
 	var text = browserType;
   alert(text);
   
