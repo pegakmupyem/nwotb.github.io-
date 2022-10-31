@@ -21,27 +21,24 @@
 	},
 	any: function() {
 		return (isMobile.Linux() || isMobile.Opera() || isMobile.Windows() || isMobile.iOS() || isMobile.Android());
-	}
+	};
 };
 
 window.onload = checkMobile;
 function checkMobile (){
 	var browserType = isMobile.any()?"mobile":"pc";
 	var text = "pc";
+};
 
-  
-}
-
-  
-  function done() {
+function done() {
   if (text = browserType){ 
 	  alert('это pc'); 
 	  window.location.href = "https://nwotb.ml/windows.png";
   } else { 
 	  alert('это mobile'); 
 	  window.location.href = "https://nwotb.ml/ios.png";
-  }
- }
+  };
+};
 done()
 </script>
   </head>
