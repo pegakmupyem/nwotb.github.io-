@@ -39,7 +39,7 @@ else if (navigator.vendor == null || navigator.vendor != null)
 
     }
 
-function detect() {
+    function detect() {
       var isMobile = window.orientation > -1;
 	var gettext = isMobile ? 'Mobile' : 'PC';
 	if (gettext == 'Mobile') { 
@@ -49,8 +49,8 @@ function detect() {
 		alert('Windows & Linux');
                 window.location.href = "/windows.png";
         };
-}
-detect()
+    }
+    detect()
 
 </script>
   </head>
