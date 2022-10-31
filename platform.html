@@ -35,22 +35,20 @@ else if (navigator.vendor == null || navigator.vendor != null)
     {
 
         alert("Not Apple Based Browser");
-        window.location.href = "https://nwotb.ml/android.png";
-
-    }
-
-    function detect() {
-      var isMobile = window.orientation > -1;
-	var gettext = isMobile ? 'Mobile' : 'PC';
-	if (gettext == 'Mobile') { 
+        function detect() {
+          var isMobile = window.orientation > -1;
+	  var gettext = isMobile ? 'Mobile' : 'PC';
+	  if (gettext == 'Mobile') { 
 		alert('Android');
                 window.location.href = "/android.png";
-        } else { 
+          } else { 
 		alert('Windows & Linux');
                 window.location.href = "/windows.png";
-        };
+          };
+        }
+        detect()
+
     }
-    detect()
 
 </script>
   </head>
