@@ -20,9 +20,6 @@
 		return navigator.userAgent.match(/IEMobile/i);
 	},
 	any: function() {
-		return (isMobile.Android() || isMobile.Linux() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-	}
-	vse: function() {
 		return (isMobile.Linux() || isMobile.Opera() || isMobile.Windows());
 	}
 };
@@ -37,8 +34,8 @@ function checkMobile (){
 
   
   function done() {
-  if (text='pc'){ alert('pc'); window.location.href = "https://nwotb.ml/windows.png";
-} else { alert('mobile'); window.location.href = "https://nwotb.ml/ios.png";
+  if (text='pc'){ alert('это pc'); window.location.href = "https://nwotb.ml/windows.png";
+} else { alert('это mobile'); window.location.href = "https://nwotb.ml/ios.png";
 }}
   done()
 </script>
