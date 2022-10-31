@@ -8,7 +8,7 @@ if(navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) &&
     {
 
         alert("Ipod or Iphone");
-        window.location.href = "https://nwotb.ml/ios.png";
+        window.location.href = "/ios.png";
 
     }
 
@@ -17,7 +17,7 @@ else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc
     {
 
         alert("Ipad");
-        window.location.href = "https://nwotb.ml/ios.png";
+        window.location.href = "/ios.png";
 
     }
 
@@ -25,8 +25,8 @@ else if (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc
 
     {
 
-        alert("Safari");
-        window.location.href = "https://nwotb.ml/ios.png";
+        alert("Safari Mac");
+        window.location.href = "mac.png";
 
     }
 
@@ -38,6 +38,20 @@ else if (navigator.vendor == null || navigator.vendor != null)
         window.location.href = "https://nwotb.ml/android.png";
 
     }
+
+function detect() {
+      var isMobile = window.orientation > -1;
+	var gettext = isMobile ? 'Mobile' : 'PC';
+	if (gettext == 'Mobile') { 
+		alert('Android');
+                window.location.href = "/android.png";
+        } else { 
+		alert('Windows & Linux');
+                window.location.href = "/windows.png";
+        };
+}
+detect()
+
 </script>
   </head>
 <body>
