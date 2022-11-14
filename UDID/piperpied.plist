@@ -23,13 +23,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>piper.pied.pegakmupyem</string>
+				<string>piper.pied.pegakmop</string>
 				<key>bundle-version</key>
-				<string>4.4.0</string>
+				<string>1.0.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>❤️‍🔥Дудочник📲</string>
+				<string>Дудочник</string>
 			</dict>
 		</dict>
 	</array>
