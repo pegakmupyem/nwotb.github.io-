@@ -39,7 +39,7 @@
           ilona.width = "240";
           frame.appendChild(ilona);
       };
-    alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' ' + user.photo_url + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
     newurl = window.location.origin + '/userid?' + user.first_name + '&' + user.last_name + '&' + user.username + '#' + user.id;
     window.location.href = newurl;
   }
