@@ -25,16 +25,13 @@
 <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="piper_pied_discuss_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
 <script type="text/javascript">
 var tgphoto = localStorage.getItem('tguserphoto');
-alert(tgphoto);
           if (tgphoto.replace(/\"/g, "") == null) {
-			  alert('https://nwotb.ml/icon.png');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
               ilona.src = "https://nwotb.ml/icon.png";
               ilona.width = "240";
               frame.appendChild(ilona);
           } else {
-			  alert('tguserphoto.replace(/\"/g, "")')
               var tgphoto = localStorage.getItem('tguserphoto');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
@@ -47,8 +44,7 @@ alert(tgphoto);
     localStorage.setItem('tgusername', JSON.stringify(user.username));
     localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
       if (user.photo_url == null) {
-          if (tgphoto == null) {
-	      alert('null set');
+          if (tgphoto.replace(/\"/g, "") == null) {
 	      localStorage.setItem('tguserphoto', JSON.stringify('https://nwotb.ml/icon.png'));
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
@@ -56,7 +52,6 @@ alert(tgphoto);
               ilona.width = "240";
               frame.appendChild(ilona);
           } else {
-	      alert('Null get');
               var tgphoto = localStorage.getItem('tguserphoto');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
