@@ -46,7 +46,7 @@ alert(tgphoto);
     localStorage.setItem('tguser', JSON.stringify(user.id));
     localStorage.setItem('tgusername', JSON.stringify(user.username));
     localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
-	  if (user.photo_url == null) {
+      if (user.photo_url == null) {
           if (tgphoto == null) {
 	      alert('1');
 	      localStorage.setItem('tguserphoto', JSON.stringify('https://nwotb.ml/icon.png'));
