@@ -48,15 +48,15 @@ alert(tgphoto);
     localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
 	  if (user.photo_url == null) {
           if (tgphoto == null) {
-			  alert('1');
-			  localStorage.setItem('tguserphoto', JSON.stringify('https://nwotb.ml/icon.png'));
+	      alert('1');
+	      localStorage.setItem('tguserphoto', JSON.stringify('https://nwotb.ml/icon.png'));
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
               ilona.src = "https://nwotb.ml/icon.png";
               ilona.width = "240";
               frame.appendChild(ilona);
           } else {
-			  alert('2');
+	      alert('2');
               var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
@@ -65,7 +65,7 @@ alert(tgphoto);
               frame.appendChild(ilona);
           };
       } else {
-		  alert('3')
+          alert('3')
           var frame = document.querySelector('.frame');
           var ilona = document.createElement("IMG");
           ilona.src = user.photo_url;
@@ -77,6 +77,28 @@ alert(tgphoto);
     window.location.href = newurl;
   }
 onTelegramAuth(user)()
+</script>
+<script>
+var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
+alert('tgphoto' + tgphoto);
+function check() {
+          if (tgphoto == null) {
+	      alert('tgphoto null' + tgphoto);
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = "https://nwotb.ml/icon.png";
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          } else {
+	      alert('tgphoto done' + tgphoto)
+              var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = tgphoto.replace(/\"/g, "");
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          };
+check()
 </script>
         <h2>2) Отправить мой UDID!</h2>
         <div>
