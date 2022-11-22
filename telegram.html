@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Telegram userid check</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body {
+            background-image: url("//nwotb.ml/icon.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-color: #00ff00;
+            color: silver;
+        }
+    </style>
+</head>
+<body>
+  <figure class='frame'>
+    <figcaption></figcaption>
+  </figure>
+    <div> 
+        <h1>1) Авторизоваться в телеграм.</h1>
+        <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="piper_pied_discuss_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+<script type="text/javascript">
+  function onTelegramAuth(user) {
+	localStorage.setItem('tguser', JSON.stringify(user.id));
+	localStorage.setItem('tgusername', JSON.stringify(user.username));
+	localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
+      if (user.photo_url == null) {
+          if (user.photo_url == null) {
+              var photo_url = user.photo_url;
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = "https://nwotb.ml/icon.png";
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          } else {
+              var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = tgphoto;
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          };
+      } else {
+          var frame = document.querySelector('.frame');
+          var ilona = document.createElement("IMG");
+          ilona.src = user.photo_url;
+          ilona.width = "240";
+          frame.appendChild(ilona);
+      };
+    alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    newurl = window.location.origin + '/userid?' + user.first_name + '&' + user.last_name + '&' + user.username + '#' + user.id;
+    window.location.href = newurl;
+  }
+onTelegramAuth(user)()
+</script>
+        <h2>2) Отправить мой UDID!</h2>
+        <div>
+            <input type="button" value="Отправить USERID 📲" onclick="Copy();" /></br> </br>
+            Ваш USERID: </br><textarea id="url" rows="3" cols="33"></textarea>
+        </div>
+    </div>
+<script>
+function Copy() {
+  var hash = window.location.hash.slice(1);
+  if (hash == "") {
+  alert('Авторизуйтесь для начала в телеграмм, а потом уже тыкайте эту кнопку‼️');
+  } else {
+  var Url = document.getElementById("url");
+  Url.innerHTML = window.location.search + '📲' + hash;
+  console.log(Url.innerHTML)
+  Url.select();
+  text = Url.select();
+  document.execCommand("copy");
+  var Url = document.getElementById("url");
+  Url.innerHTML = 'Скопировано, отправить в телеграм: 📟' + window.location.search + '📱' + hash;
+  console.log(Url.innerHTML)
+  setTimeout(() => alert('✂️ Telegram account user.id скопирован ' + text + ' в буфер обмена, отправьте мне в телеграмм содержимое буфера обмена 📲 для оформления подписки!'), 1500);
+  setTimeout(function(){ window.location="https://t.me/pegakmop"; },6666);
+  };
+}
+</script>
+</body>
+</html>
