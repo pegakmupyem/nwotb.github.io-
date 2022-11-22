@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>nwotb.ml UDID Registration</title>
     <meta name="viewport" content="width=device-width" />
-    <script src="UDIDopen.js"></script>
-    <script src="UDIDicon.js"></script>
-    <script src="UDIDcopy.js"></script>
     <style>
         body {
             background-image: url("//nwotb.ml/icon.png");
@@ -24,19 +21,33 @@
     <figcaption></figcaption>
   </figure>
     <div> 
-        <h1>1) Узнать мой UDID?</h1>
+        <h1>1) Авторизоваться в телеграм.</h1>
         <button style="font-size:13px;" onclick="get()">Установить профиль 📲</button>
         <h2>2) Отправить мой UDID!</h2>
         <div>
-            <input type="button" value="Отправить UDID 📲" onclick="Copy();" /></br> </br>
-            Ваш UDID и название вашего устройства: </br><textarea id="url" rows="2" cols="48"></textarea>
+            <input type="button" value="Отправить USERID 📲" onclick="Copy();" /></br> </br>
+            Ваш USERID: </br><textarea id="url" rows="3" cols="33"></textarea>
         </div>
-        <h3>3) Check Device Information (UDID) </h3>
- 
-        <button style="font-size:13px;"><a href=/open.mobileprovision>Удалить профиль 📵</a></button>
     </div>
-    <script src="UDIDopen.js"></script>
-    <script src="UDIDicon.js"></script>
-    <script src="UDIDcopy.js"></script>
+<script>
+function Copy() {
+  var hash = window.location.hash.slice(1);
+  if (hash == "") {
+  alert('Авторизуйтесь для начала, а потом тыкайте кнопку');
+  } else {
+  var Url = document.getElementById("url");
+  Url.innerHTML = window.location.search + '📲' + hash;
+  console.log(Url.innerHTML)
+  Url.select();
+  text = Url.select();
+  document.execCommand("copy");
+  var Url = document.getElementById("url");
+  Url.innerHTML = 'Скопировано, отправить в телеграм: 📟' + window.location.search + '📱' + hash;
+  console.log(Url.innerHTML)
+  setTimeout(() => alert('✂️ Telegram account id скопирован ' + text + ' в буфер обмена, отправьте мне в телеграмм содержимое буфера обмена 📲 для оформления подписки!'), 1500);
+  setTimeout(function(){ window.location="https://t.me/pegakmop"; },6666);
+  };
+}
+</script>
 </body>
 </html>
