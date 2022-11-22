@@ -25,18 +25,38 @@
         <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="piper_pied_discuss_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
 <script type="text/javascript">
 var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
-  function onTelegramAuth(user) {
-    localStorage.setItem('tguser', JSON.stringify(user.id));
-    localStorage.setItem('tgusername', JSON.stringify(user.username));
-    localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
-      if (tgphoto == null) {
+alert(tgphoto);
           if (tgphoto == null) {
+			  alert('4');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
               ilona.src = "https://nwotb.ml/icon.png";
               ilona.width = "240";
               frame.appendChild(ilona);
           } else {
+			  alert('5')
+              var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = tgphoto;
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          };
+  function onTelegramAuth(user) {
+    localStorage.setItem('tguser', JSON.stringify(user.id));
+    localStorage.setItem('tgusername', JSON.stringify(user.username));
+    localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
+	  if (user.photo_url == null) {
+          if (tgphoto == null) {
+			  alert('1');
+			  localStorage.setItem('tguserphoto', JSON.stringify('https://nwotb.ml/icon.png'));
+              var frame = document.querySelector('.frame');
+              var ilona = document.createElement("IMG");
+              ilona.src = "https://nwotb.ml/icon.png";
+              ilona.width = "240";
+              frame.appendChild(ilona);
+          } else {
+			  alert('2');
               var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
               var frame = document.querySelector('.frame');
               var ilona = document.createElement("IMG");
@@ -45,6 +65,7 @@ var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
               frame.appendChild(ilona);
           };
       } else {
+		  alert('3')
           var frame = document.querySelector('.frame');
           var ilona = document.createElement("IMG");
           ilona.src = user.photo_url;
@@ -52,7 +73,7 @@ var tgphoto = localStorage.getItem('tgphoto.replace(/\"/g, "")');
           frame.appendChild(ilona);
       };
     alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    newurl = window.location.origin + '/telegram?' + user.first_name + '&' + user.last_name + '&' + user.username + '#' + user.id;
+    newurl = window.location.origin + '/userid?' + user.first_name + '&' + user.last_name + '&' + user.username + '#' + user.id;
     window.location.href = newurl;
   }
 onTelegramAuth(user)()
