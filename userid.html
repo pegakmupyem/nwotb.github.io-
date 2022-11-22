@@ -26,19 +26,20 @@
 <script type="text/javascript">
   function onTelegramAuth(user) {
       if (user.photo_url == null) {
-      var frame = document.querySelector('.frame');
-      var ilona = document.createElement("IMG");
-      ilona.src = "https://nwotb.ml/icon.png";
-      ilona.width = "123";
-      frame.appendChild(ilona);
+          var photo_url = user.photo_url;
+          var frame = document.querySelector('.frame');
+          var ilona = document.createElement("IMG");
+          ilona.src = "https://nwotb.ml/icon.png";
+          ilona.width = "240";
+          frame.appendChild(ilona);
       } else {
-      var frame = document.querySelector('.frame');
-      var ilona = document.createElement("IMG");
-      ilona.src = user.photo_url;
-      ilona.width = "123";
-      frame.appendChild(ilona);
+          var frame = document.querySelector('.frame');
+          var ilona = document.createElement("IMG");
+          ilona.src = user.photo_url;
+          ilona.width = "240";
+          frame.appendChild(ilona);
       };
-    alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' ' + user.photo_url + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
     newurl = window.location.origin + '/userid?' + user.first_name + '&' + user.last_name + '&' + user.username + '#' + user.id;
     window.location.href = newurl;
   }
@@ -65,7 +66,7 @@ function Copy() {
   var Url = document.getElementById("url");
   Url.innerHTML = 'Скопировано, отправить в телеграм: 📟' + window.location.search + '📱' + hash;
   console.log(Url.innerHTML)
-  setTimeout(() => alert('✂️ Telegram account id скопирован ' + text + ' в буфер обмена, отправьте мне в телеграмм содержимое буфера обмена 📲 для оформления подписки!'), 1500);
+  setTimeout(() => alert('✂️ Telegram account user.id скопирован ' + text + ' в буфер обмена, отправьте мне в телеграмм содержимое буфера обмена 📲 для оформления подписки!'), 1500);
   setTimeout(function(){ window.location="https://t.me/pegakmop"; },6666);
   };
 }
