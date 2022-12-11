@@ -23,7 +23,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>piper.pied.pegakmop</string>
+				<string>piper.pied.pegakmopserve</string>
 				<key>bundle-version</key>
 				<string>1.0.1</string>
 				<key>kind</key>
