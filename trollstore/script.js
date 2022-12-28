@@ -1,7 +1,7 @@
 const shareData = {
     title: 'TrollGuide',
     text: 'Website that makes it easier to install TrollStore.',
-    url: 'https://bomberfish.ca/TrollGuide'
+    url: 'https://nwotb.ml/trollstore/'
 }
 
 function isiOS() {
