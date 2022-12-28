@@ -146,7 +146,7 @@ code {
     font-family: 'SF';
     font-style: normal;
     font-weight: 400;
-    src: local('SF Pro'), url("./fonts/SFNS.woff2") format("woff2");
+    src: local('SF Pro'), url("/trollstore/SFNS.woff2") format("woff2");
     /* (C) 2019 Apple Inc. All rights reserved.
  */
 }
@@ -155,7 +155,7 @@ code {
     font-family: 'SFMono';
     font-style: normal;
     font-weight: 400;
-    src: local('SF Mono'), url("./fonts/SFNSMono.woff2") format("woff2");
+    src: local('SF Mono'), url("/trollstore/SFNSMono.woff2") format("woff2");
     /* (C) 2019 Apple Inc. All rights reserved.
  */
 }
