@@ -23,13 +23,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>ru.tcsbank.mobileclient2</string>
+				<string>ru.tcsbank.mobileclient</string>
 				<key>bundle-version</key>
 				<string>6.3.15</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Tinkoff2</string>
+				<string>Тинькофф</string>
 			</dict>
 		</dict>
 	</array>
